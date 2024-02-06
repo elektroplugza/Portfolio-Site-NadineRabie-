@@ -13,28 +13,37 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: #333333; 
+  
 }
 h1, h2, h3, h4 {
     line-height: 1.4;
 }
 h1 {
-    font-size: 2.75em;
+    font-size: 2em;
     font-weight: 900; 
 }
 h2 {
-    font-size: 2.25em;
+    font-size: 1.8em;
     font-weight: 900;
 }
 h3 {
-    font-size: 1.75em;
+    font-size: 1.6em;
     font-weight: 700;
 }
 h4 {
-    font-size: 1.25em;
+    font-size: 1.424em;
+    font-weight: 600;
+}
+h5 {
+    font-size: 1.26em;
+    font-weight: 600;
+}
+h6 {
+    font-size: 1.125em;
     font-weight: 600;
 }
 caption {
-    font-size: .82em;
+    font-size: .88em;
     font-weight: 400;
     font-style: italic;
 }
@@ -58,92 +67,60 @@ img {
 }
 
 a {
-    color: rgb(117, 151, 217);
-    text-decoration: none;
+    color: #333333;
+    text-decoration: underline;
 }
 
-a:visited {
-    color: rgb(117, 151, 217);
-    text-decoration: none;
-}
-
-a:hover,
-a:focus {
-    color: rgb(117, 151, 217);
-    text-decoration: underline; 
+a:hover {
+    color:rgb(117, 151, 217);
+    text-decoration: underline;
 }
 
 a:active {
-    color: rgb(33, 77, 144);
-}
-
-/* Styles for the primary button states */
-.primary.button {
-    display: inline-block;
-    background-color: white;
-    position: relative;
-    color: #333333;
-    font-size: 16px;
-    font-weight: 700;
+    color:rgb(50, 99, 197);
     text-decoration: none;
-    padding-bottom: 12px;
-}
-
-.primary.button::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 12px;
-    width: calc(100% - 24px); /* Adjust width as needed */
-    height: 1px;
-    color:#333333;
-    background-color: #333333;
-    text-decoration: none;
-    transition: height 0.1s;
-}
-
-/* Styles for the hover state */
-.primary.button:hover::after, 
-.primary.button:focus::after {
-    height: 6px;
-    background-color: rgb(117, 151, 217);
-}
-
-.button.contact {
-    background-color: transparent;
-    color:rgb(117, 151, 217);
-    text-transform: uppercase;
-    border: 2px solid rgb(117, 151, 217);
-    padding: 10px;
-    border-radius: 3px;
-}
-
-.button.contact:hover {
-    background-color:rgb(117, 151, 217);
-    color: white;
 }
 
 /* Layout styling */
 
 .container {
-    padding: 0 15px;
+    padding: 0 16px;
+    margin-top: 32px;
+}
+
+#header.container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.border-container {
+    text-align: center;
+    padding: 8px;
+    margin: 0 16px 0 16px;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 8px;
 }
 
 #final-prototype.container {
-    padding: 32px, 0, 32px, 0;
+    padding: 16px, 0, 16px, 0;
     border-bottom: 2px solid rgb(117, 151, 217);
     border-top: 2px solid rgb(117, 151, 217);
 }
 
 #conclusion.container {
-    padding: 0px, 0, 32px, 0;
+    padding: 0px, 0, 16px, 0;
     border-bottom: 2px solid rgb(117, 151, 217);
 
 }
 
 .row {
-    margin: 25px 0;
+    margin: 24px 0;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 * {
@@ -155,11 +132,11 @@ a:active {
 }
 
 main {
-    padding-top: 164.5px;
+    padding-top: 78.26px;
 }
 
 header {
-    padding: 10px;
+    padding: 0;
     width: 100%;
     text-align: center;
     border-bottom: 2px solid #E5E7EB;
@@ -168,12 +145,16 @@ header {
 }
 
 .logo {
-    max-width: 250px;
+    max-width: 96px;
 }
+
+/* Add this to your existing CSS */
+
 
 nav > ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav > ul > li {
@@ -181,15 +162,33 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
+    display: inline-block;
     padding: 8px;
-    margin: 0, 16px, 0, 0; 
+    margin: 0px 8px 0 0; 
+    font-weight: 500;
+    color: #333333;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333; /* Default color */
+    transition: color 0.3s; /* Smooth transition effect over 0.3 seconds */
+}
+
+nav a:hover {
+    color: rgb(117, 151, 217); /* Color on hover */
     font-weight: 700;
-    color:rgb(117, 151, 217);
+    text-decoration: none;
+}
+
+nav a:active {
+    color: rgb(50, 99, 197);
+    text-decoration: underline;
 }
 
 #hero {
     background-color: rgba(133, 182, 255, 0.2);
-    padding: 20px 0; 
+    padding: 0px 0; 
     display: inline-block;
     width: 100%;
 }
@@ -197,3 +196,185 @@ nav > ul > li > a {
 .social-media-icon {
     max-width: 24px;
 }
+
+[class*="col-"] {
+    float: left;
+    padding: 8px;
+}
+
+.col-sm-12 {
+    width: 100%
+}
+
+.media-scroll {
+    display: flex;
+    overflow: auto;
+    gap: 1em;
+    background-color: white;
+}
+
+.media-scroll img {
+    min-width: 186px;
+}
+
+.arrow-icon {
+    max-width: 40px;
+}
+
+.plutopay-hero {
+    display: inline-block;
+    background-color: #ECF6FF;
+    margin: 32px 0;
+    padding: 0 16px;
+}
+
+/*.plutopay-hero img {
+    max-width: 700px;
+}*/
+
+/* Medium devices (640px and larger) */
+@media only screen and (min-width: 640px) {
+    header {
+        text-align: unset;
+        padding: 16px 0 16px;
+        border-bottom: none
+    }
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+    main {
+        padding-top: 97px;
+    }
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+    #hero span {
+        display: block;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-12 {
+        width:100%;
+    }
+    .col-md-4 {
+        width: 33.33%
+    }
+    body {
+        font-size: 18px;
+    }
+    #about-page h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    .border-container {
+        text-align: center;
+        padding: 8px;
+        margin: 0 16px 0 16px;
+        border: 2px solid rgb(229, 231, 235);
+        border-radius: 8px;
+    }
+ }
+
+/* Large devices (1024px and larger) */
+@media only screen and (min-width: 1024px) {
+    .col-lg-7 {
+        width: 58.33%;
+    }
+    .col-lg-5 {
+        width: 41.66%;
+    }
+    .col-lg-4 {
+        width: 33.33%
+    }
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h1 {
+        font-size: 2.75em;
+    }
+    h2 {
+        font-size: 2.25em;
+    }
+    h3 {
+        font-size: 1.75em;
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+
+    .container {
+        padding: 0 16px;
+        margin: 0 56px;
+    }
+    .plutopay-hero {
+        display: inline-block;
+        background-color: #ECF6FF;
+        margin: 32px 0;
+        padding: 0 72px;
+    }
+
+    .border-container {
+        text-align: center;
+        padding: 8px;
+        margin: 0 72px 0 72px;
+        border: 2px solid rgb(229, 231, 235);
+        border-radius: 8px;
+        max-width: 1200px;
+    }
+}
+
+
+/* X-large devices (1440px and larger) */
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}  
+/* Styles for the normal state */
+.primary-button {
+    display: inline-block;
+    position: relative;
+    color: #333333;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding-bottom: 12px;
+}
+
+.primary-button:hover {
+    color:rgb(117, 151, 217);
+    text-decoration: none;
+}
+
+.primary-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    width: calc(100% - 24px); /* Adjust width as needed */
+    height: 2px;
+    background-color: #333333;
+    text-decoration: none;
+    transition: height 0.2s;
+}
+
+/* Styles for the hover state */
+.primary-button:hover::after {
+    height: 6px;
+    background-color:rgb(117, 151, 217);
+    color:rgb(117, 151, 217);
+    text-decoration: none;
+}
+
+

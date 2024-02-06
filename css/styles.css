@@ -132,20 +132,19 @@ a:active {
 }
 
 main {
-    padding-top: 78.26px;
+    padding-top: 68.664px;
 }
 
 header {
     padding: 0;
     width: 100%;
-    text-align: center;
-    border-bottom: 2px solid #E5E7EB;
     background-color: white;
     position: fixed;
 }
 
 .logo {
     max-width: 96px;
+    /*min-width: 150; */
 }
 
 /* Add this to your existing CSS */
@@ -157,13 +156,9 @@ nav > ul {
     margin: 0;
 }
 
-nav > ul > li {
-    display: inline-block
-}
-
 nav > ul > li > a {
     display: inline-block;
-    padding: 8px;
+    padding: 0px;
     margin: 0px 8px 0 0; 
     font-weight: 500;
     color: #333333;
@@ -186,6 +181,39 @@ nav a:active {
     text-decoration: underline;
 }
 
+.navtoggle, .navtoggle.responsive {
+    position: relative;
+}
+
+.navtoggle li:not(:last-child) {
+    display: none;
+}
+
+.navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 20px;
+    padding-right: 0;
+}
+
+.navtoggle.responsive li  {
+    display: block;
+}
+
+.navtoggle.responsive nav {
+    padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+    display: block;
+    padding: 10px 0;
+    border-top: 1px solid rgba(133, 182, 255, 0.4);
+}
+  
+.navtoggle.responsive li:last-child  {
+    padding: 0 0 10px;
+}  
+  
 #hero {
     background-color: rgba(133, 182, 255, 0.2);
     padding: 0px 0; 
@@ -239,13 +267,28 @@ nav a:active {
         padding: 16px 0 16px;
         border-bottom: none
     }
+
+    nav > ul > li {
+        display: inline-block;
+        padding: 8px;
+    }
+    
     nav {
         width: auto;
         float: right;
         margin-top: 4px;
     }
+
+    .navtoggle li:not(:last-child) {
+        display: inline-block;
+      }
+    
+    .navtoggle li:last-child {
+        display: none;
+      }
+      
     main {
-        padding-top: 97px;
+        padding-top: 70.66px;
     }
     h2 {
         margin-top: 0px;

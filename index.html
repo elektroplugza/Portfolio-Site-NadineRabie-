@@ -17,22 +17,26 @@
     <meta name="description"
         content="UX/UI portfolio for Nadine Rabie, a designer and researcher based in Munich from Bethlehem">
     <title>Nadine Rabie UX/UI Designer Munich</title>
+    <script src="https://kit.fontawesome.com/49f2d5e5f4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div class="container" id="header">
-            <a href="index.html">
-                <img class="logo" src="img/logo/logo.svg" alt="Nadine Rabie">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#work">Work</a></li>
-                    <li><a href="files/CV.pdf" target="_blank">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="navtoggle" id="myNavtoggle">
+                <a href="index.html">
+                    <img class="logo" src="img/logo/logo.svg" alt="Nadine Rabie">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#work" onclick="menuToggle()">Work</a></li>
+                        <li><a href="files/CV.pdf" target="_blank" onclick="menuToggle()">Resume</a></li>
+                        <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+                        <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+                    </ul>
+                </nav>
+            </div>    
         </div>
     </header>
     <main>
@@ -102,6 +106,7 @@
             <p>Copyright Nadine Rabie 2024</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
 
